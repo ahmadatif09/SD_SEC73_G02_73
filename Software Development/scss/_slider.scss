@@ -1,0 +1,98 @@
+/* Home Slider area css
+============================================================================================ */
+.slider_area{
+    .slider_inner{
+        .rev_slider{
+            .tp-revslider-mainul{
+                li{
+                    z-index: 5 !important;
+                    .slider_text_box{
+                        .bg_box{
+                            background: rgba(0, 0, 0, 0.8);
+                            height: 380px;
+                            width: 660px;
+                            position: relative;
+                            &:before{
+                                content: "";
+                                border: 1px solid $baseColor;
+                                width: 640px;
+                                height: 360px;
+                                position: absolute;
+                                left: 11px;
+                                top: 11px;
+                            }
+                        }
+                        .first_text{
+                            color: #fff;
+                            font-family: $can;
+                        }
+                        .secand_text{
+                            color: $baseColor;
+                            font-family: $op;
+                            font-family: $vib;
+                        }
+                        .third_text{
+                            font-family: $can;
+                            color: #fff;
+                        }
+                        .btn_text{
+                            .submit_btn_bg{
+                                width: 130px;
+                                border-radius: 0px;
+                                height: 45px;
+                                line-height: 45px;
+                                &:before{
+                                    border-radius: 0px
+                                }
+                                &:after{
+                                    border-radius: 0px
+                                }
+                            }
+                        }
+                        &.text_box2{
+                            .bg_box{
+                                background: rgba(255, 255, 255, 0.8);
+                            }
+                            .first_text{
+                                color: $dip;
+                            }
+                            .third_text{
+                                color: $dip;
+                            }
+                        }
+                    }
+                }
+            }
+            .tp-leftarrow{
+                height: 110px;
+                width: 30px;
+                text-align: center;
+                background: rgba(0, 0, 0, .5);
+                z-index: 6;
+                @include transition;
+                &:before{
+                    line-height: 110px;
+                }
+                &:hover{
+                    background: rgba(0, 0, 0, .9);
+                }
+            }
+            .tp-rightarrow{
+                height: 110px;
+                width: 30px;
+                text-align: center;
+                background: rgba(0, 0, 0, .5);
+                z-index: 6;
+                @include transition;
+                &:before{
+                    line-height: 110px;
+                }
+                &:hover{
+                    background: rgba(0, 0, 0, .9);
+                }
+            }
+        }
+    }
+}
+/* End Home Slider area css
+============================================================================================ */

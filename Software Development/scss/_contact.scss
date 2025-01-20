@@ -1,0 +1,142 @@
+/* Contact area css
+============================================================================================ */
+.contact_area{
+    padding: 100px 0px;
+    .contact_details{
+        p{
+            font-family: $op;
+            color: $pfont;
+            line-height: 26px;
+            & + p{
+                padding-top: 25px;
+                padding-bottom: 35px;
+            }
+        }
+        .media{
+            margin-top: 40px;
+            .media-left{
+                padding-right: 30px;
+                i{
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                    color: #fff;
+                    line-height: 60px;
+                    font-size: 30px;
+                    background: $baseColor;
+                    text-align: center;
+                    border: 1px solid $baseColor;
+                    @include transition;
+                }
+            }
+            .media-body{
+                vertical-align: middle;
+                h4{
+                    font-size: 14px;
+                    font-family: $op;
+                    text-transform: uppercase;
+                    color: $dip;
+                    font-weight: bold;
+                    padding-bottom: 12px;
+                }
+                h5{
+                    font-size: 14px;
+                    font-family: $op;
+                    color: $pfont;
+                }
+            }
+            &:hover{
+                .media-left{
+                    i{
+                        background: transparent;
+                        color: $baseColor;
+                    }
+                }
+            }
+        }
+    }
+}
+.contact_title{
+    font-size: 36px;
+    font-family: $can;
+    color: $dip;
+    text-transform: uppercase;
+    padding-bottom: 42px;
+}
+.contact_map{
+    height: 450px;
+    iframe{
+        width: 100%;
+        min-height: 450px;
+    }
+}
+.row.contact_form_area{
+    .contact_title{
+        padding-left: 15px;
+    }
+    .form-group{
+        margin-bottom: 20px;
+        input{
+            height: 50px;
+            border-radius: 0px;
+            box-shadow: none;
+            text-shadow: none;
+            border: 1px solid #dfdfdf;
+            font-family: $op;
+            color: $pfont;
+            font-size: 14px;
+            padding: 0px 15px;
+            @include placeholder{
+                font-family: $op;
+                color: $pfont;
+                font-size: 14px;
+            }
+            &:focus{
+                border-color: $baseColor;
+            }
+        }
+        textarea{
+            height: 120px;
+            border-radius: 0px;
+            box-shadow: none;
+            text-shadow: none;
+            border: 1px solid #dfdfdf;
+            font-family: $op;
+            color: $pfont;
+            font-size: 14px;
+            resize: none;
+            padding: 10px 15px;
+            @include placeholder{
+                font-family: $op;
+                color: $pfont;
+                font-size: 14px;
+            }
+            &:focus{
+                border-color: $baseColor;
+            }
+        }
+        .submit_btn{
+            max-width: 140px;
+            border-radius: 0px; 
+            &:before{
+                border-radius: 0px;
+            }
+            &:after{
+                border-radius: 0px;
+            }
+            &:hover{
+                color: $baseColor;
+            }
+        }
+        &:last-child{
+            margin-bottom: 0px;
+            margin-top: 10px;
+        }
+    }
+}
+.mapBox{
+    width: 100%;
+    min-height: 450px;
+}
+/* End Contact area css
+============================================================================================ */

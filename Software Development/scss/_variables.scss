@@ -1,0 +1,47 @@
+/*font Variables*/
+$can: 'Cantata One', serif;
+$op: 'Open Sans', sans-serif;
+$vib: 'Great Vibes', cursive;
+
+
+/*Color Variables*/
+
+$baseColor: #b10400;
+$pfont: #666666;
+$dip: #333333;
+
+
+
+// Mixins
+@mixin transition($property: all, $duration: 400ms, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay; 
+}
+
+// Placeholder Mixins
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+.col-md-offset-right-1 {
+    margin-right: 8.33333333%;
+}
+// Font family link
+
+@import url('https://fonts.googleapis.com/css?family=Cantata+One|Great+Vibes|Open+Sans:300,400,400i,600,600i,700,800');
+//
+//@font-face {
+//    font-family: "ralH";
+//    src: url(../fonts/theme-font/Raleway-Heavy.woff);
+//}
+//@font-face {
+//    font-family: "monR";
+//    src: url(../fonts/theme-font/Montserrat-Regular.woff);
+//}
+//@font-face {
+//    font-family: "monB";
+//    src: url(../fonts/theme-font/Montserrat-Bold.woff);
+//}

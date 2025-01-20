@@ -1,0 +1,35 @@
+/* Service css
+============================================================================================ */
+.service_area{
+    padding: 164px 0px 100px 0;
+}
+.service_item{
+    border: 1px solid $baseColor;
+    text-align: center;
+    position: relative;
+    padding-bottom: 30px;
+    img{
+        max-width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        top: -64px;
+    }
+    h3{
+        font-size: 20px;
+        font-family: $can;
+        color: $baseColor;
+        text-transform: uppercase;
+        padding: 90px 0px 10px 0;
+    }
+    p{
+        font-size: 14px;
+        line-height: 26px;
+        font-family: $op;
+        color: $pfont;
+        padding: 15px 0px 25px 0;
+    }
+}
+/* End Service css
+============================================================================================ */

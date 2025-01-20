@@ -1,0 +1,231 @@
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration:none;
+    &:hover, &:focus{
+       text-decoration:none;
+    }
+}
+.row.m0{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    line-height: 24px;
+    font-size: 15px;
+}
+
+body, p, h1, h2, h3, h4, h5, h6{
+    margin: 0px;
+    padding: 0px;
+}
+
+#success{
+    display: none;
+}
+#error{
+    display: none;
+}
+/* Main title css
+============================================================================================ */
+.s_white_title{
+    text-align: center;
+    h3{
+        font-size: 36px;
+        font-family: $vib;
+        color: #fff;
+    }
+    h2{
+        font-size: 36px;
+        font-family: $can;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 10px 0px 20px 0px;
+    }
+    p{
+        color: #fff;
+        font-size: 14px;
+        font-family: $op;
+        text-transform: uppercase;
+    }
+}
+.s_black_title{
+    text-align: center;
+    h3{
+        font-size: 36px;
+        font-family: $vib;
+        color: $baseColor;
+    }
+    h2{
+        font-size: 36px;
+        font-family: $can;
+        text-transform: uppercase;
+        color: $dip;
+    }
+}
+.s_white_red_title{
+    text-align: center;
+    h3{
+        font-size: 36px;
+        font-family: $vib;
+        color: $baseColor;
+    }
+    h2{
+        font-size: 36px;
+        font-family: $can;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 10px 0px 20px 0px;
+    }
+    p{
+        color: #fff;
+        font-size: 14px;
+        font-family: $op;
+        text-transform: uppercase;
+    }
+}
+.s_black_title{
+    text-align: center;
+    h3{
+        font-size: 36px;
+        font-family: $vib;
+        color: $baseColor;
+    }
+    h2{
+        font-size: 36px;
+        font-family: $can;
+        text-transform: uppercase;
+        color: $dip;
+    }
+}
+/* End Main title css
+============================================================================================ */
+
+
+
+#preloader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    right: 0px;
+    z-index: 99;
+    background: #fff;
+}
+.loader {
+  width: 100%;
+  text-align: center;
+  height: 1em;
+  padding: 0;
+}
+.loader__box {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 100%;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+  -webkit-perspective: 200px;
+          perspective: 200px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-animation: BoxFlip 2s ease-in-out 0s infinite;
+          animation: BoxFlip 2s ease-in-out 0s infinite;
+}
+.loader__box:nth-child(1) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+.loader__box:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.loader__box:nth-child(3) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+.loader__box:nth-child(4) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+@-webkit-keyframes BoxFlip {
+  25%,
+  50% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+  75% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  0%,
+  75.01%,
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+@keyframes BoxFlip {
+  25%,
+  50% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+  75% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  0%,
+  75.01%,
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+.loader__box::before,
+.loader__box::after,
+.top {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.loader__box::before,
+.loader__box::after {
+  background: #e2eaf5;
+  content: '';
+}
+.top {
+  background: $baseColor;
+}
+.loader__box::before {
+  -webkit-transform: rotateY(0deg) translateZ(0.5em);
+          transform: rotateY(0deg) translateZ(0.5em);
+}
+.loader__box::after {
+  -webkit-transform: rotateX(180deg) translateZ(0.5em);
+          transform: rotateX(180deg) translateZ(0.5em);
+}
+.top {
+  -webkit-transform: rotateX(90deg) translateZ(0.5em);
+          transform: rotateX(90deg) translateZ(0.5em);
+}
+.absolute-center {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+ 

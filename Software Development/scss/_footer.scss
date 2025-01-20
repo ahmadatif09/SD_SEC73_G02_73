@@ -1,0 +1,262 @@
+/* Footer area css
+============================================================================================ */
+.footer_area{
+    
+}
+.f_w_title{
+    padding-bottom: 55px;
+    h4{
+        font-size: 18px;
+        font-family: $can;
+        color: #fff;
+        text-transform: uppercase;
+    }
+}
+.footer_widget_area{
+    background: #181818;
+    padding: 100px 0px;
+    .f_widget{
+
+    }
+}
+.about_widget{
+    p{
+        color: #fff;
+        font-size: 14px;
+        line-height: 26px;
+        font-family: $op;
+        padding-bottom: 20px;
+    }
+    ul{
+        li{
+            display: inline-block;
+            margin-right: 10px;
+            a{
+                display: block;
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                line-height: 40px;
+                background: #fff;
+                color: #3b5998;
+                border-radius: 50%; 
+                @include transition;
+            }
+            &:nth-child(2){
+                a{
+                    color: #70c2e9;
+                }
+            }
+            &:nth-child(3){
+                a{
+                    color: $baseColor;
+                }
+            }
+            &:last-child{
+                margin-right: 0px;
+                a{
+                    color: #23527c;
+                }
+            }
+            &:hover{
+                a{
+                    color: #fff;
+                    background: $baseColor;
+                }
+            }
+        }
+    }
+}
+.contact_widget{
+    p{
+        color: #fff;
+        font-size: 14px;
+        line-height: 26px;
+        font-family: $op;
+        padding-bottom: 15px;
+    }
+    ul{
+        padding-left: 30px;
+        li{
+            margin-bottom: 3px;
+            a{
+                position: relative;
+                color: #fff;
+                font-size: 14px;
+                line-height: 28px;
+                font-family: $op;
+                i{
+                    position: absolute;
+                    top: 3px;
+                    left: -30px;
+                    color: $baseColor;
+                }
+            }
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+.twitter_widget{
+    ul{
+        li{
+            font-size: 14px;
+            line-height: 28px;
+            font-family: $op;
+            color: #fff;
+            margin-bottom: 25px;
+            a{
+                color: #fff;
+                font-size: 14px;
+                line-height: 28px;
+                font-family: $op;
+                @include transition;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &:hover{
+                a{
+                    color: $baseColor;
+                }
+            }
+        }
+    }
+}
+.gallery_widget{
+    ul{
+        margin-right: -10px;
+        margin-top: -10px;
+        li{
+            width: calc(100% / 3);
+            float: left;
+            overflow: hidden;
+            padding-right: 10px;
+            padding-top: 10px;
+            a{
+                position: relative;
+                display: block;
+                z-index: 2;
+                img{
+                    max-width: 100%;
+                }
+                &:before{
+                    content: "";
+                    position: absolute;
+                    background: rgba(177, 4, 0, .6);
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    opacity: 0;
+                    transition: all 200ms linear;
+                }
+                i{
+                    color: #fff;
+                    position: absolute;
+                    font-size: 14px;
+                    width: 100%;
+                    text-align: center;
+                    top: 50%;
+                    z-index: 3;
+                    left: 0;
+                    transform: scale(0);
+                    @include transition;
+                    margin-top: -4px;
+                }
+            }
+            &:hover{
+                a{
+                    &:before{
+                        opacity: 1;
+                    }
+                    i{
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+.copy_right_area{
+    background: #121212;
+    .pull-left{
+        h5{
+            color: #fff;
+            line-height: 80px;
+            font-family: 14px;
+            font-family: $op;
+            a{
+                color: $baseColor;
+            }
+        }
+    }
+    .pull-right{
+        .navbar-nav.navbar-right{
+            li{
+                margin-left: 30px;
+                a{
+                    padding: 0;
+                    background: transparent;
+                    line-height: 80px;
+                    margin: 0;
+                    font-size: 14px;
+                    font-family: $can;
+                    color: #fff;
+                    @include transition;
+                }
+                &:first-child{
+                    margin-left: 0px;
+                }
+                &.active, &:hover{
+                    a{
+                        color: $baseColor;
+                    }
+                }
+            }
+        }
+    }
+}
+.social_icon{
+    li{
+        display: inline-block;
+        margin-right: 10px;
+        a{
+            display: block;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 40px;
+            background: #fff;
+            color: #3b5998;
+            border-radius: 50%; 
+            @include transition;
+        }
+        &:nth-child(2){
+            a{
+                color: #70c2e9;
+            }
+        }
+        &:nth-child(3){
+            a{
+                color: $baseColor;
+            }
+        }
+        &:last-child{
+            margin-right: 0px;
+            a{
+                color: #23527c;
+            }
+        }
+        &:hover{
+            a{
+                color: #fff;
+                background: $baseColor;
+            }
+        }
+    }
+}
+/* End Footer area css
+============================================================================================ */

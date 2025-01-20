@@ -1,0 +1,826 @@
+/* Our Feature css
+============================================================================================ */
+.our_feature_area{
+    padding: 100px 0px;
+    .s_black_title{
+        padding-bottom: 55px;
+    }
+}
+.feature_slider{
+    .owl-prev, .owl-next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 4;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        color: #fff;
+        line-height: 40px;
+        font-size: 14px;
+        background: $baseColor;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: $baseColor;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            border-radius: 5px;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            border: 1px solid $baseColor;
+            -webkit-transform: scale(1.2,1.2);
+            transform: scale(1.2,1.2);
+            border-radius: 5px;
+        }
+        &:hover{
+            color: $baseColor;
+            background: transparent;
+            &:before{
+                opacity: 0;
+                -webkit-transform: scale(0.5,0.5);
+                transform: scale(0.5,0.5);
+            }
+            &:after{
+                opacity: 1;
+                -webkit-transform: scale(1,1);
+                transform: scale(1,1);
+            }
+        }
+    }
+    .owl-prev{
+        left: -55px;
+        
+    }
+    .owl-next{
+        right: -55px;
+    }
+}
+.feature_item{
+    .feature_item_inner{
+        position: relative;
+        z-index: 3;
+        &:before{
+            content: "";
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            left: 0px;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transform: perspective(1px) translateZ(0);
+            transform: scaleY(0);
+            transform-origin: 50% 100%;
+            transition-property: transform;
+            transition: all 200ms ease-in;
+        }
+        .icon_hover{
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            i{
+                height: 44px;
+                width: 44px;
+                background: rgba(0, 0, 0, .7);
+                text-align: center;
+                line-height: 44px;
+                color: #fff;
+                font-size: 14px;
+                display: inline-block;
+                border-radius: 50%;
+                margin-right: 5px;
+                @include transition;
+                cursor: pointer;
+                opacity: 0;
+                transform: scale(0);
+                &:hover{
+                    background: rgba(177, 4, 0, .70);
+                }
+            }
+        }
+        img{
+            max-width: 100%;
+        }
+    }
+    .title_text{
+        background: $baseColor;
+        padding: 18px 10px;
+        .feature_left{
+            display: table-cell;
+            width: 1%;
+            white-space: nowrap;
+            padding-right: 4px;
+            font-family: $can;
+            font-size: 16px;
+            text-transform: uppercase;
+            z-index: 4;
+            color: #fff;
+            a{
+                color: #fff;
+                font-family: $can;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+        }
+        .restaurant_feature_dots{
+            height: 2px;
+            background: radial-gradient(circle closest-side, #fff 67%, transparent 100%);
+            background-position: 50% 65%;
+            background-size: 4px 2px;
+            background-repeat: repeat-x;
+            display: table-cell;
+            width: 98%;
+            z-index: 1;
+            position: relative;
+        }
+        .feature_right{
+            display: table-cell;
+            width: 1%;
+            padding-left: 7px;
+            white-space: nowrap;
+            font-family: $can;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+    }
+    &:hover{
+        .feature_item_inner{
+            &:before{
+                transform: scaleY(1);
+            }
+            .icon_hover{
+                i{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+/* End Our Feature css
+============================================================================================ */
+
+/* Bookink Table css
+============================================================================================ */
+.booking_table_area{
+    background: url(../img/booking-table-bg.jpg) no-repeat fixed center center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    padding: 100px 0px;
+    overflow: hidden;
+    &:before{
+        content: "";
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+    .s_white_title{
+        padding-bottom: 55px;
+    }
+    .input-append{
+        position: relative;
+        input{
+            width: 100%;
+            background: #fff;
+            outline: none;
+            box-shadow: none;
+            border: 1px solid #aaaaaa;
+            height: 40px;
+            padding: 0px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #666666;
+            font-family: $op;
+            @include placeholder{
+                font-size: 14px;
+                color: #666666;
+                font-family: $op;
+            }
+        }
+        &:before{
+            content:"\f0dc";
+            font: normal normal normal 14px/1 FontAwesome;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: #666666;
+        }
+    }
+    .party_size{
+        .bootstrap-select{
+            width: 100% !important;
+            .btn-default{
+                padding: 0px 15px;
+                height: 40px;
+                border: 1px solid #aaaaaa;
+                margin: 0;
+                outline: none !important;
+                box-shadow: none !important;
+                background: #fff;
+                .filter-option{
+                    font-size: 14px;
+                    color: #666666;
+                    font-family: $op;
+                }
+                .bs-caret{
+                    .caret{
+                        display: none;
+                    }
+                    &:before{
+                        content:"\f0dc";
+                        font: normal normal normal 14px/1 FontAwesome;
+                        position: absolute;
+                        right: 15px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 14px;
+                        color: #666666;
+                    }
+                }
+            }
+            .dropdown-menu{
+                .dropdown-menu.inner{
+                    li{
+                        a{
+                            outline: none !important;
+                            box-shadow: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.booking_area_white{
+        background: #f7f7f7;
+        &:before{
+            display: none;
+        }
+        .s_black_title{
+            padding-bottom: 45px;
+            h3{
+                
+            }
+            h2{}
+            p{
+                padding-top: 10px;
+            }
+        }
+        .submit_btn{
+            &:hover{
+                color: $baseColor;
+            }
+        }
+        .map_contact{
+            margin-top: 100px;
+            .map_area{
+                iframe{
+                    width: 100%;
+                    height: 290px;
+                }
+            }
+            .map_contact_info{
+                h3{
+                    font-size: 24px;
+                    font-family: $can;
+                    color: $dip;
+                    text-transform: uppercase;
+                    padding-bottom: 25px;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 26px;
+                    color: $pfont;
+                    font-family: $op;
+                }
+                ul{
+                    padding: 10px 0px 20px 0px;
+                    li{
+                        a{
+                            font-size: 14px;
+                            line-height: 26px;
+                            color: $pfont;
+                            font-family: $op;
+                            @include transition;
+                            span{
+                                padding-right: 30px;
+                                color: $dip;
+                            }
+                            &:hover{
+                                color: $baseColor;
+                            }
+                        }
+                        &:nth-child(2){
+                            a{
+                                span{
+                                    padding-right: 40px;
+                                }
+                            }
+                        }
+                        &:nth-child(3){
+                            a{
+                                span{
+                                    padding-right: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+                h4{
+                    font-size: 18px;
+                    font-family: $can;
+                    color: $dip;
+                    text-transform: uppercase;
+                    padding-bottom: 14px;
+                }
+                h5{
+                    font-size: 14px;
+                    line-height: 26px;
+                    color: $pfont;
+                    font-family: $op;
+                }
+            }
+        }
+        .form_area{
+            text-align: center;
+            .form-group{
+                margin-bottom: 20px;
+                input{
+                    height: 40px;
+                    box-shadow: none;
+                    text-shadow: none;
+                    border: 1px solid #aaaaaa;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    font-family: $op;
+                    color: $pfont;
+                    padding: 0px 15px;
+                    @include placeholder{
+                        font-size: 14px;
+                        font-family: $op;
+                        color: $pfont;
+                    }
+                }
+                textarea{
+                    box-shadow: none;
+                    text-shadow: none;
+                    border: 1px solid #aaaaaa;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    font-family: $op;
+                    color: $pfont;
+                    padding: 10px 15px; 
+                    height: 150px;
+                    @include placeholder{
+                        font-size: 14px;
+                        font-family: $op;
+                        color: $pfont;
+                    }
+                }
+                .submit_btn{
+                    max-width: 260px;
+                    margin: 0 auto;
+                }
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+/* End Bookink Table css
+============================================================================================ */
+
+/* Most Popular item css
+============================================================================================ */
+.most_popular_item_area{
+    background: url(../img/popular_menu_bg.jpg) no-repeat scroll center center;
+    background-size: cover;
+    padding: 100px 0px;
+    position: relative;
+    z-index: 2;
+    &:before{
+        content: "";
+        background: rgba(177, 4, 0, .80);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+    }
+    .popular_filter{
+        text-align: center;
+        margin: 45px 0px 55px 0px;
+        overflow: hidden;
+        li{
+            display: inline-block;
+            margin-right: 12px;
+            a{
+                
+                text-align: center;
+                font-size: 14px;
+                font-family: $can;
+                text-transform: uppercase;
+                color: #000;
+                display: block;
+                border: 1px solid #000;
+                padding: 0px 15px;
+                line-height: 30px;
+                @include transition;
+            }
+            &:hover, &.active{
+                a{
+                    background: #111111;
+                    border-color: #fff;
+                    color: #fff;
+                }
+            }
+            &:last-chlild{
+                margin-right: 0px;
+            }
+        }
+    }
+    .p_recype_item_main{
+        background: #fff;
+        padding: 50px 65px;
+        .row.p_recype_item_active{
+            margin-top: -30px;
+        }
+        .media{
+            margin-top: 30px;
+            .media-left{
+                padding-right: 0;
+            }
+            .media-body{
+                border: 1px solid $baseColor;
+                padding-left: 15px;
+                border-left: 0px;
+                padding-right: 15px;
+                h3{
+                    font-size: 14px;
+                    font-family: $can;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    color: $dip;
+                    @include transition;
+                    padding-top: 15px;
+                }
+                h4{
+                    display: inline-block;
+                    float: right;
+                    font-size: 14px;
+                    font-family: $can;
+                    text-transform: uppercase;
+                    color: $baseColor;
+                    padding-top: 15px;
+                }
+                p{
+                    font-size: 14px;
+                    color: $pfont;
+                    font-family: $op;
+                    padding: 5px 0px 15px 0px;
+                }
+                .read_mor_btn{
+                    line-height: 30px;
+                    text-transform: capitalize;
+                    width: 110px;
+                    display: inline-block;
+                }
+                ul{
+                    display: inline-block;
+                    float: right;
+                    vertical-align: bottom;
+                    li{
+                        display: inline-block; 
+                        a{
+                            color: #ffcf3b;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .media-body{
+                    h3{
+                        color: $baseColor
+                    }
+                }
+            }
+        }
+    }
+    &.menu_list_page{
+        background: #fff;
+        &:before{
+            display: none;
+        }
+        .popular_filter{
+            margin: 0px;
+        }
+        .feature_item{
+            margin-top: 30px;
+        }
+    }
+}
+/* End Most Popular item css
+============================================================================================ */
+
+/* Our Chef area css
+============================================================================================ */
+.our_chefs_area{
+    background: #f7f7f7;
+    padding: 100px 0px;
+    .s_black_title{
+        padding-bottom: 55px;
+    }
+}
+.chefs_slider_active{
+    .chef_item_inner{
+        .chef_img{
+            position: relative;
+            .chef_hover{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                text-align: center;
+                background: rgba(0, 0, 0, 0.75);
+                opacity: 0;
+                @include transition;
+                h4{
+                    color: #fff;
+                    border: 1px solid $baseColor;
+                    font-family: $can;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    padding: 0px 12px;
+                    display: inline-block;
+                    line-height: 40px;
+                    margin: 60px 0px 30px 0px;
+                }
+                h5{
+                    font-size: 14px;
+                    font-family: $op;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-weight: bold;
+                    padding-bottom: 18px;
+                }
+                p{
+                    font-size: 14px;
+                    font-family: $op;
+                    line-height: 26px;
+                    color: #fff;
+                    padding: 0px 15px;
+                }
+            }
+        }
+        .chef_name{
+            text-align: center;
+            background: $baseColor;
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+            .name_chef_text{
+                @include transition;
+            }
+            h3{
+                font-size: 14px;
+                font-family: $can;
+                text-transform: uppercase;
+                color: #fff;
+                padding-top: 25px;
+                padding-bottom: 5px;
+            }
+            h4{
+                font-size: 14px;
+                font-family: $op;
+                padding-bottom: 25px;
+            }
+            ul{
+                text-align: center;
+                position: absolute;
+                bottom: -100px;
+                @include transition;
+                left: 0;
+                width: 100%;
+                li{
+                    display: inline-block;
+                    margin-right: 16px;
+                    a{
+                        height: 45px;
+                        width: 45px;
+                        display: block;
+                        border: 1px solid #fff;
+                        background: #677fb5;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 45px;
+                        color: #fff;
+                    }
+                    &:nth-child(2){
+                        a{
+                            background: #70c2e9;
+                        }
+                    }
+                    &:last-child{
+                        a{
+                            background: #0077b5;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover{
+            .chef_name{
+                .name_chef_text{
+                    opacity: 0;
+                }
+                ul{
+                    bottom: 20px;
+                }
+            }
+            .chef_img{
+                .chef_hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .owl-prev, .owl-next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 4;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        color: #fff;
+        line-height: 40px;
+        font-size: 14px;
+        background: $baseColor;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: $baseColor;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            border-radius: 5px;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            border: 1px solid $baseColor;
+            -webkit-transform: scale(1.2,1.2);
+            transform: scale(1.2,1.2);
+            border-radius: 5px;
+        }
+        &:hover{
+            color: $baseColor;
+            background: transparent;
+            &:before{
+                opacity: 0;
+                -webkit-transform: scale(0.5,0.5);
+                transform: scale(0.5,0.5);
+            }
+            &:after{
+                opacity: 1;
+                -webkit-transform: scale(1,1);
+                transform: scale(1,1);
+            }
+        }
+    }
+    .owl-prev{
+        left: -55px;
+        
+    }
+    .owl-next{
+        right: -55px;
+    }
+}
+/* End Our Chef area css
+============================================================================================ */
+
+/* About us area css
+============================================================================================ */
+.about_us_content{
+    padding: 40px 0px 100px 0;
+    .about_inner_item{
+        margin-top: 60px;
+        .about_left_content{
+            h4{
+                font-family: $can;
+                font-size: 24px;
+                color: $dip;
+                margin-bottom: -12px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 26px;
+                font-family: $op;
+                color: $pfont;
+                padding-top: 25px;
+            }
+            ul{
+                padding-top: 22px;
+                li{
+                    margin-bottom: 6px;
+                    a{
+                        font-size: 14px;
+                        line-height: 26px;
+                        color: $pfont;
+                        font-family: $op;
+                        @include transition;
+                        i{
+                            color: $baseColor;
+                            padding-right: 5px;
+                        }
+                    }
+                    &:last-child{
+                        margin-bottom: 0px;
+                    }
+                    &:hover{
+                        a{
+                            color: $baseColor;
+                        }
+                    }
+                }
+            }
+        }
+        .about_right_image{
+            img{
+                max-width: 100%;
+            }
+        }
+        .about_right_ms{
+            margin-top: -15px;
+            margin-right: -15px;
+            .about_ms_item{
+                max-width: 100%;
+                margin-right: 15px;
+                margin-top: 15px;
+            }
+        }
+        .about_single_content{
+            p{
+                font-size: 14px;
+                line-height: 26px;
+                font-family: $op;
+                color: $pfont;
+                padding-top: 15px;
+            }
+        }
+    }
+}
+/* End About us area css
+============================================================================================ */

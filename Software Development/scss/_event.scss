@@ -1,0 +1,107 @@
+/* Nex Event area css
+============================================================================================ */
+.next_event_area{
+    padding: 100px 0px;
+    background: url(../img/next-event/next-event-bg.jpg) no-repeat scroll center center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    &:before{
+        content: "";
+        background: rgba(0, 0, 0, .70);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+    .s_white_red_title{
+        padding-bottom: 60px;
+        h2{
+            padding-bottom: 0px;
+        }
+    }
+    .next_event_slider{
+        .left_event_img{
+            
+        }
+        .right_event_text{
+            padding-left: 40px;
+            background: #fff;
+            padding-bottom: 33px;
+            h3{
+                font-size: 18px;
+                font-family: $can;
+                color: $dip;
+                padding-bottom: 15px;
+                padding-top: 30px;
+                &:hover{
+                    color: $baseColor;
+                }
+            }
+            p{
+                line-height: 26px;
+                font-size: 14px;
+                font-family: $op;
+                color: $pfont;
+                padding-bottom: 20px;
+                a{
+                    font-weight: bold;
+                    color: $dip;
+                    &:hover{
+                        color: $baseColor;
+                    }
+                }
+            }
+            .event_shedule{
+                .item{
+                    background: $baseColor;
+                    padding: 17px 0px;
+                    position: relative;
+                    min-width: 70px;
+                    max-width: 70px;
+                    width: 100%;
+                    display: inline-block;
+                    text-align: center;
+                    font-size: 36px;
+                    font-family: $can;
+                    color: #fff;
+                    margin-right: 20px;
+                    .label{
+                        display: inline-block;
+                        font-size: 14px;
+                        font-family: $op;
+                        padding: 0px;
+                    }
+                }
+                .separator{
+                    display: none;
+                }
+            }
+        }
+        .owl-controls{
+            .owl-dots{
+                text-align: center;
+                margin-top: 55px;
+                .owl-dot{
+                    height: 13px;
+                    width: 13px;
+                    background: #fff;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-right: 10px;
+                    @include transition;
+                    &:hover, &.active{
+                        background: $baseColor;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+/* End Nex Event area css
+============================================================================================ */

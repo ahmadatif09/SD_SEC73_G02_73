@@ -1,0 +1,267 @@
+/* Event Button css
+============================================================================================ */
+.event_btn{
+    background: transparent;
+    text-align: center;
+    width: 150px; 
+    font-family: $can;
+    color: #fff;
+    line-height: 50px;
+    display: inline-block;
+    font-size: 14px;
+    z-index: 2;
+    position: relative;
+    letter-spacing: .42px;
+    i{
+        padding-right: 5px;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: $baseColor;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        border: 1px solid $baseColor;
+        -webkit-transform: scale(1.2,1.2);
+        transform: scale(1.2,1.2);
+    }
+    &:hover{
+        color: #fff;
+        &:before{
+            opacity: 0;
+            -webkit-transform: scale(0.5,0.5);
+            transform: scale(0.5,0.5);
+        }
+        &:after{
+            opacity: 1;
+            -webkit-transform: scale(1,1);
+            transform: scale(1,1);
+        }
+    }
+}
+.read_mor_btn{
+    background: transparent;
+    text-align: center;
+    width: 120px; 
+    font-family: $can;
+    color: $dip;
+    line-height: 40px;
+    display: inline-block;
+    font-size: 12px;
+    z-index: 2;
+    position: relative;
+    letter-spacing: .42px;
+    text-transform: uppercase;
+    i{
+        padding-right: 5px;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border: 1px solid $dip;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        background: $baseColor;
+        -webkit-transform: scale(1.2,1.2);
+        transform: scale(1.2,1.2);
+    }
+    &:hover{
+        color: #fff;
+        &:before{
+            opacity: 0;
+            -webkit-transform: scale(0.5,0.5);
+            transform: scale(0.5,0.5);
+        }
+        &:after{
+            opacity: 1;
+            -webkit-transform: scale(1,1);
+            transform: scale(1,1);
+        }
+    }
+}
+
+.submit_btn{
+    background: transparent;
+    text-align: center;
+    width: 100%; 
+    font-family: $op;
+    line-height: 28px;
+    display: inline-block;
+    font-size: 14px;
+    z-index: 2;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 40px;
+    position: relative;
+    letter-spacing: .42px;
+    text-transform: uppercase;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none;
+    color: #fff;
+    i{
+        padding-right: 5px;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: $baseColor;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        border-radius: 5px;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        border: 1px solid $baseColor;
+        -webkit-transform: scale(1.2,1.2);
+        transform: scale(1.2,1.2);
+        border-radius: 5px;
+    }
+    &:hover{
+        color: #fff;
+        background: transparent;
+        &:before{
+            opacity: 0;
+            -webkit-transform: scale(0.5,0.5);
+            transform: scale(0.5,0.5);
+        }
+        &:after{
+            opacity: 1;
+            -webkit-transform: scale(1,1);
+            transform: scale(1,1);
+        }
+    }
+}
+
+.submit_btn_bg{
+    background: transparent;
+    text-align: center;
+    width: 100%; 
+    font-family: $op;
+    line-height: 28px;
+    display: inline-block;
+    font-size: 14px;
+    z-index: 2;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 40px;
+    position: relative;
+    letter-spacing: .42px;
+    text-transform: uppercase;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none;
+    color: #fff;
+    i{
+        padding-right: 5px;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: $baseColor;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        border-radius: 5px;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        border: 1px solid $baseColor;
+        -webkit-transform: scale(1.2,1.2);
+        transform: scale(1.2,1.2);
+        border-radius: 5px;
+    }
+    &:hover{
+        color: $baseColor;
+        background: transparent;
+        &:before{
+            opacity: 0;
+            -webkit-transform: scale(0.5,0.5);
+            transform: scale(0.5,0.5);
+        }
+        &:after{
+            opacity: 1;
+            -webkit-transform: scale(1,1);
+            transform: scale(1,1);
+        }
+    }
+}
+/* End Event Button css
+============================================================================================ */
